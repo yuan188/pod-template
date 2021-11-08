@@ -111,8 +111,11 @@ module Pod
 
       Dir.chdir("Example") do
         system "pod install"
+        system "mkdir -p #{pod_name}.xcworkspace/xcuserdata/$USER.xcuserdatad"
+        system "mv IDETemplateMacros.plist #{pod_name}.xcworkspace/xcuserdata/$USER.xcuserdatad/IDETemplateMacros.plist"
       end
 
+      `git add .`
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end

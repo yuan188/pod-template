@@ -10,6 +10,8 @@ An opinionated template for creating a Pod with the following features:
 - Testing as a standard
 - Turnkey access to Travis CI
 - Also supports Carthage
+- Swift5
+- IDETemplateMacros
 
 ## Getting started
 
